@@ -71,9 +71,10 @@ class InfoController extends AdminController
     {
         $form = new Form(new Info());
         $form->text('title', __('标题'));
-        $form->image('thumb', __('图片'))->retainable();
-        $form->image('thumb', __('图片'))->file();
-        $form->select('cate', __('文章分类'))->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
+        $form->file('thumb', __('图片'));
+        $form->select('cate', __('文章分类'))->options(function(){
+            return ['数据','无敌'];
+        });
         $form->textarea('content',__('内容'))->rows(10);
         $form->number('reading', __('阅读量'));
         $form->number('sort', __('排序'));
