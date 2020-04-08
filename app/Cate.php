@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Info extends Authenticatable
+class Cate extends Authenticatable
 {
     use Notifiable;
 
@@ -15,7 +15,7 @@ class Info extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'id', 'uid', 'createtime',
+        
     ];
 
     /**
@@ -26,13 +26,4 @@ class Info extends Authenticatable
     protected $hidden = [
         
     ];
-
-    protected $dateFormat = 'U';
-
-    public $timestamps = false;
-
-    // public  function  setCreateTimeAttribute($value)
-    // {
-    //     $this->attributes['createtime'] = strtotime($value);
-    // }
 }
