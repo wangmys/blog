@@ -164,7 +164,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        // Freyo\Flysystem\QcloudCOSv5\ServiceProvider::class,
         /*
          * Package Service Providers...
          */

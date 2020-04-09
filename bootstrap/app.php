@@ -41,6 +41,15 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->singleton('filesystem', function ($app) {
+    $app->alias('filesystem', Illuminate\Contracts\Filesystem\Factory::class);
+    return $app->loadComponent(
+        'filesystems',
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        'filesystem'
+    );
+});
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
