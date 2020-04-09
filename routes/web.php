@@ -12,5 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$shopname = "梦圆博客";
+
+
+    return view('welcome',['shopname'=>$shopname]);
 });
+
+
+
+Route::get('/login', function (){
+    $shopname = "多谢来到我的博客";
+
+    return view('welcome',['shopname'=>$shopname]);
+})->name('login');
+
+
+
+Route::get('/register', function (){
+    $shopname = "但是我的博客不欢迎你,滚！";
+
+    return view('welcome',['shopname'=>$shopname]);
+})->name('register');
